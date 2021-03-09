@@ -8,6 +8,8 @@ It shows:
 - how to use the API to display all projects for the current user or team
 
 
+![image](https://user-images.githubusercontent.com/7249920/110459590-7389e500-80cd-11eb-9258-6d6d229c7a50.png)
+
 
 ## Run this example
 
