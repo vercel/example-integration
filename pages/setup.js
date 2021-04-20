@@ -49,7 +49,7 @@ export default function SetupPage() {
     <Layout>
       <div className="w-full max-w-2xl divide-y">
         <section className="py-4 flex justify-between items-center">
-          <h1 className="text-lg font-medium">Integration is beeing installed on a </h1>
+          <h1 className="text-lg font-medium">Integration is installed on a </h1>
 
           {data.accessToken && (
             <div className="rounded-full bg-blue-500 text-white text-sm px-2.5 py-0.5">
