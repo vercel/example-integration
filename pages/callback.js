@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Layout from 'components/layout'
 import Loader from 'components/loader'
 
-export default function SetupPage() {
+export default function CallbackPage() {
   const router = useRouter()
   const [data, setData] = useState({})
   const [projects, setProjects] = useState()
@@ -48,11 +48,11 @@ export default function SetupPage() {
   return (
     <Layout>
       <div className="w-full max-w-2xl divide-y">
-        <section className="py-4 flex justify-between items-center">
-          <h1 className="text-lg font-medium">Integration is installed on a </h1>
+        <section className="py-4 flex items-center space-x-2 justify-center">
+          <h1 className="text-lg font-medium">Integration is installed on a</h1>
 
           {data.accessToken && (
-            <div className="rounded-full bg-blue-500 text-white text-sm px-2.5 py-0.5">
+            <div className="rounded-md bg-blue-500 text-white text-sm px-2.5 py-0.5">
               {/* If we have a teamId, the installation is made on a team */}
               {data.userId && data.teamId ? 'team' : 'personal account'}
             </div>
@@ -63,7 +63,7 @@ export default function SetupPage() {
           <h1 className="text-lg font-medium">Data:</h1>
           <div className="mt-1">
             {data.accessToken ? (
-              <pre>
+              <pre className="text-sm">
                 {JSON.stringify(data, null, '  ')}
               </pre>
             ) : <Loader />}

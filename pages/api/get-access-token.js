@@ -16,7 +16,7 @@ export default async function getAccessToken(req, res) {
       client_id: process.env.CLIENT_ID,
       client_secret: process.env.CLIENT_SECRET,
       code: req.query.code,
-      redirect_uri: `${process.env.HOST}/setup`
+      redirect_uri: `${process.env.HOST}/callback` // this parameter should match the Redirect URL in your integration settings on Vercel
     })
   })
 
