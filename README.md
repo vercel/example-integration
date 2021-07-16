@@ -15,7 +15,7 @@ It shows:
 
 1. Create a new integration on the [integration console](https://vercel.com/dashboard/integrations/console)
 
-2. Set the Redirect URL to `http://localhost:3000/setup`
+2. Set the Redirect URL to `http://localhost:3000/callback`
 
 3. Set the environment variables:
 
