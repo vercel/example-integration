@@ -39,7 +39,7 @@ npm run dev
 
 6. Add it to a project
 
-Now your example integration is running on `http://localhost:3000`. Click on "View in Marketplace" to see your integration with all details like others will see it. You're now able to add your integration to a project. Once you click "add" you see a popup that will use the defined Redirect URL `http://localhost:3000/setup`. The integration is now installed.
+Now your example integration is running on `http://localhost:3000`. Click on "View in Marketplace" to see your integration with all details like others will see it. You're now able to add your integration to a project. Once you click "add" you see a popup that will use the defined Redirect URL `http://localhost:3000/callback`. The integration is now installed.
 
 
 
