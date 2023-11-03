@@ -3,10 +3,6 @@
 import qs from "querystring";
 
 export async function exchangeCodeForAccessToken(code: string) {
-  console.log({
-    code,
-  });
-
   /*
     Exchange the code for a long-lived access token.
     Note: This call can only be made once per code.
@@ -26,10 +22,12 @@ export async function exchangeCodeForAccessToken(code: string) {
 
   const body = await result.json();
 
-  console.log(
-    "https://api.vercel.com/v2/oauth/access_token returned:",
-    JSON.stringify(body, null, 2)
-  );
+  if (process.env.NODE_ENV !== "production") {
+    console.log(
+      "https://api.vercel.com/v2/oauth/access_token returned:",
+      JSON.stringify(body, null, 2)
+    );
+  }
 
   return body as {
     token_type: string;
