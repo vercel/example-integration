@@ -52,7 +52,7 @@ Now your example integration is running on `http://localhost:3000`. Click on "Vi
    - `teamId`: The id of the team (only provided if the integration gets installed on a team)
    - `configurationId`: The id of the installation (you usually want to store this information)
    - `next`: The URL we're redirecting if the setup is done
-4. Once the user sees the page `/setup` we exchange the provided `code` for an `access_token`. See the docs for [exchanging code for an access token](https://vercel.com/docs/integrations#using-the-vercel-api/getting-an-access-token/exchanging-the-code-for-an-access-token)
+4. Once the user sees the page `/setup` we exchange the provided `code` for an `access_token`. See the docs for [exchanging code for an access token](https://vercel.com/docs/rest-api/vercel-api-integrations#exchange-code-for-access-token)
 5. After the `code` was exchanged, we can use the `access_token` for our calls to the Vercel API. See the docs for [available endpoints](https://vercel.com/docs/api#endpoints). In this case we're querying the [Projects endpoint](https://vercel.com/docs/api#endpoints/projects/get-projects) to get a list of all projects for the user or the team
 6. The user sees a list of projects. This would be the step to provide additional information and allow the user to link projects to your own resources.
 7. The user clicks on "Redirect me back to Vercel" to close the popup and complete the installation on Vercel. In your real integration, this should be done automatically after you collected all information you need, to save the user some clicks.
